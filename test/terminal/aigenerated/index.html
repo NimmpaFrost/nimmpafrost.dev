@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background: #000;
+      color: #0f0;
+      font-family: 'Courier New', monospace;
+      padding: 20px;
+    }
+    
+    #terminal {
+      white-space: pre-wrap;
+    }
+    
+    .cursor {
+      animation: blink 1s infinite;
+    }
+    
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div id="terminal"></div>
+  
+  <script>
+    const terminal = document.getElementById('terminal');
+    
+    // Array of commands to type
+    const commands = [
+      { text: "Accessing SCP Foundation Database...", delay: 50 },
+      { text: "\nEnter file designation: ", delay: 50 },
+      { text: "SCP-173", delay: 100 },
+      { text: "\n\nRetrieving file...", delay: 50 },
+      { text: "\n[████████████████] 100%", delay: 30 },
+      { text: "\n\nFILE ACCESSED\n", delay: 50 }
+    ];
+    
+    let commandIndex = 0;
+    let charIndex = 0;
+    
+    function typeWriter() {
+      if (commandIndex < commands.length) {
+        const current = commands[commandIndex];
+        
+        if (charIndex < current.text.length) {
+          terminal.innerHTML += current.text.charAt(charIndex);
+          charIndex++;
+          setTimeout(typeWriter, current.delay);
+        } else {
+          // Move to next command
+          commandIndex++;
+          charIndex = 0;
+          setTimeout(typeWriter, 500); // Pause between commands
+        }
+      } else {
+        // Add blinking cursor at end
+        terminal.innerHTML += '<span class="cursor">_</span>';
+      }
+    }
+    
+    // Start typing when page loads
+    window.onload = () => {
+      setTimeout(typeWriter, 500); // Initial delay
+    };
+  </script>
+</body>
+</html>
