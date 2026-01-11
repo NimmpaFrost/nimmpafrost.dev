@@ -31,12 +31,25 @@
     
     // Array of commands to type
     const commands = [
-      { text: "C://users/tbq>get SiteEcho from 104.254.128.194 as /se/", delay: 50 },
+      { text: "C:\\users\\tbq>", delay: 0 },
+      { text: "get SiteEcho from 104.254.128.194 as \\se\\", delay: 50 },
       { text: "\nAccsessing 104.254.128.194...", delay: 50 },
-      { text: "\nCompelte! Now downloading SiteEcho as /se/ (warning may take a bit)", delay: 50 },
-      { text: "████████████████", delay: 250 },
-      { text: " Done in 2.5 minutes!", delay: 30 },
-      { text: "\nC://users/tbq/se>", delay: 50 }
+      { text: "\nDownloading SiteEcho as \\se\\ (warning may take a bit): ", delay: 20 },
+      { text: "████████████████", delay: 300 },
+      { text: "  at 82.32 gb/s\nDownload Complete: Took 2 minutes 31 seconds.", delay: 20 },
+      { text: "\nC:\\users\\tbq\\se>", delay: 0 },
+      { text: "locate o5-2", delay: 50 },
+      { text: "\nLocating file...", delay: 50 },
+      { text: "\nFile \\fp\\council\\o5-2.txt located!\nWarning file is corrupted!", delay: 40 },
+      { text: "\nC:\\users\\tbq\\se>", delay: 0 },
+      { text: "wanderers-lib uncorrupt file \\fp\\council\\o5-2.txt as The Black Queen with password **************", delay: 200 },
+      { text: "\nWanderers Lib> reparing file: ", delay: 100 },
+      { text: "████████████████ at 1mb/s", delay: 160 },
+      { text: "\nWanderers Lib> Done! Warning file is still patrially corrupted, do you wish to open it? [Y/N]", delay: 20 },
+      { text: "\nC:\\users\\tbq\\se\\fp\\council\\wanderers lib>", delay: 0 },
+      { text: "y", delay: 5 },
+      { text: "\nOpening o5-2.txt...", delay: 10 },
+      { text: "\n|| Displaying SCP-7421\nSCP-7421 is presumed to be a human currently operating among the     Ö̶́̃̂͠5̶̛̋̇̄ ̶̳̒̈́̏c̶̟̑̏o̴̓̈̽͆ư̷̒̀̕n̶̏͑͋́c̵̲̼̯̅i̸̫͑̏ͅl      as      O̵͛͛̍̃5̵̛̮̘͒-̸̄̄̃̂2̵̥͓̠͆       ,\nthey treat themselves as a human and live as a human, going through the usual activities one would partake. SCP-7421 is able to redact documents and has even written some, such as; SCP-██, SCP-██ and even SCP-██. They are not forced to go through tests and must be asked before testing commences, their preferred researcher is [REDACTED] but will allow other researchers to commence testing.\nSCP-7421 isn’t considered dangerous, but the flames must be treated like proper open flames and safety precautions that relate to flames must be followed when in proximity to avoid personnel injury.\n\n|| Containment Procedures\nThe cell that is meant to contain SCP-7421 is repurposed into a comfortable apartment suitable for even high-class living. This request was made by SCP-7421 themselves. As of current record, this room contains: a queen sized bed with appropriate accessories, a bathroom fit with a shower, a bath and a spa, a desk for       O̸̾̾̒͠5̸̊̍̀̕ ̴͋͋̉̾c̵͉͋͘͜ǒ̷̀̑̄ù̵͚̇̀n̶̈́̋͒̋c̶̈́̓̀͝i̸̎͌̈́̇l̶̍̓̃̀        work and a TV with any requested game consoles which also includes requested games. ALL objects in the room must be fireproof and must be checked on weekly to avoid anything catching fire and potentially destroying sensitive documents", delay: 0 }
     ];
     
     let commandIndex = 0;
